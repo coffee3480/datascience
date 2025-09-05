@@ -1,0 +1,41 @@
+booking_number	hotel_name	hotel_address	room_type	checkin_date	checkout_date	name	surname	breakfast	price
+NR47K1_200218	Ruby	10 Red Street	Triple Standart	2020-03-16	2020-03-25	Kara	Daniels	f	19753.00
+6VYBZB_200629	Aquamarine	1 Paper Street	Double Standart with separated bed	2020-08-27	2020-08-28	Todd	Mckenzie	f	12949.00
+R37NUP_210508	Saphire	5 Blue Street	Single Comfort	2022-03-21	2022-03-22	Bobby	Camacho	f	3959.00
+Z1F452_250716	Aquamarine	1 Paper Street	Triple Comfort	2025-09-29	2025-10-05	Patrick	Mcmahon	t	81340.00
+0T76R6_230314	Saphire	5 Blue Street	Double Standart	2024-01-09	2024-01-10	Gabriel	Levine	t	4893.00
+0TPAS2_210401	Saphire	5 Blue Street	Double Comfort	2022-01-17	2022-01-22	Daryl	Holmes	f	122389.00
+9QVO6L_200513	Diamond	3 White Street	Double Comfort	2020-11-05	2020-11-17	Bradley	Gutierrez	f	9570.00
+G81PI0_230724	Saphire	5 Blue Street	Double Comfort	2024-06-24	2024-07-01	Angel	Doyle	f	13371.00
+0P99Q7_241201	Diamond	3 White Street	Luxury Room	2025-05-18	2025-05-31	Emily	Fox	f	5829.00
+K4A94V_250430	Diamond	3 White Street	Luxury Room	2026-04-10	2026-04-16	Lydia	Velazquez	f	16614.00
+R75312_230416	Ruby	10 Red Street	Single Standart	2023-12-13	2023-12-19	Melinda	Elliott	f	11493.00
+Q06PDX_200831	Ruby	10 Red Street	Triple Standart	2021-05-06	2021-05-11	Melinda	Elliott	t	17247.00
+9L9627_200617	Aquamarine	1 Paper Street	Triple Comfort	2020-07-13	2020-07-19	Gilbert	Barnes	f	18984.00
+R3TN3H_230212	Aquamarine	1 Paper Street	Double Standart with king size bed	2023-12-20	2023-12-29	Tim	Delgado	t	6178.00
+7VOP03_220416	Saphire	5 Blue Street	Single Comfort	2023-01-09	2023-01-15	April	Forbes	t	12931.00
+76YDJE_201127	Diamond	3 White Street	Double Comfort	2021-04-24	2021-05-02	Dana	Abbott	t	5565.00
+Q2IM7Z_220615	Saphire	5 Blue Street	Double Comfort	2022-07-09	2022-07-10	Alexandria	Myers	f	1473.00
+0403Z9_200211	Saphire	5 Blue Street	Single Comfort	2020-11-12	2020-11-21	Shelby	Olson	f	104365.00
+13P1H5_230201	Diamond	3 White Street	Luxury Room	2023-11-20	2023-11-29	Micheal	Washington	f	13375.00
+DNZU5C_230910	Aquamarine	1 Paper Street	Double Standart with separated bed	2023-11-30	2023-12-03	Heidi	Pugh	t	2937.00
+MEEV8B_220628	Saphire	5 Blue Street	Double Standart	2023-04-30	2023-05-14	Gilbert	Barnes	t	8529.00
+6WUV4S_210121	Ruby	10 Red Street	Single Standart	2021-02-11	2021-02-13	Laurie	Joseph	f	15361.00
+9M6DZM_250318	Diamond	3 White Street	Double Comfort	2025-11-21	2025-11-30	Timothy	Bautista	f	2447.00
+72Q226_250419	Saphire	5 Blue Street	Double Comfort	2025-12-16	2025-12-18	Dana	Abbott	t	7060.00
+451EVQ_230612	Diamond	3 White Street	Single Comfort	2023-08-09	2023-08-18	Timothy	George	t	3203.00
+CBM736_211015	Aquamarine	1 Paper Street	Double Comfort with separated beds	2022-01-23	2022-02-04	Laurie	Joseph	f	14717.00
+6H855Y_220523	Saphire	5 Blue Street	Single Standart	2022-12-18	2022-12-23	Cathy	Mcdonald	f	4235.00
+7B5I30_250510	Saphire	5 Blue Street	Single Standart	2026-04-23	2026-05-04	Melinda	Elliott	f	10647.00
+PQ35MM_210529	Ruby	10 Red Street	Triple Standart	2021-10-14	2021-10-23	Micheal	Washington	f	19631.00
+5345RS_250419	Aquamarine	1 Paper Street	Double Comfort with separated beds	2025-10-27	2025-11-09	Darlene	Camacho	f	1018.00
+AI1QZ3_201115	Ruby	10 Red Street	Single Standart	2020-11-18	2020-11-28	Kent	Garcia	f	140933.00
+M1Q99D_220712	Diamond	3 White Street	Luxury Room	2023-02-15	2023-02-26	Lydia	Velazquez	f	78316.00
+VQCD87_221021	Ruby	10 Red Street	Single Standart	2023-09-09	2023-09-10	April	Forbes	f	5561.00
+TFTGSM_250206	Saphire	5 Blue Street	Single Comfort	2025-04-06	2025-04-20	Lee	Shelton	t	61132.00
+09Q80E_220330	Ruby	10 Red Street	Single Standart	2022-07-21	2022-07-27	Connie	Clements	f	80468.00
+T4M1T2_230926	Aquamarine	1 Paper Street	Double Standart with separated bed	2023-11-24	2023-11-30	Lee	Shelton	f	5862.00
+9KNUNR_240715	Aquamarine	1 Paper Street	Double Comfort with separated beds	2024-12-15	2024-12-20	Jacqueline	Lang	f	138992.00
+JK4F67_201212	Aquamarine	1 Paper Street	Double Standart with separated bed	2021-12-05	2021-12-15	Makayla	Heath	f	9682.00
+11ZXS2_250104	Aquamarine	1 Paper Street	Triple Comfort	2025-04-08	2025-04-18	Bradley	Gutierrez	f	4330.00
+2CT26F_220212	Aquamarine	1 Paper Street	Triple Comfort	2022-05-21	2022-05-29	Whitney	Jimenez	f	12577.00

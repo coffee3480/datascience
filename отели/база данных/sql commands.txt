@@ -1,0 +1,113 @@
+CREATE DATABASE hotels_web;
+\c hotels_web
+
+CREATE TABLE guests (
+surname VARCHAR, 
+name VARCHAR, 
+phone CHAR(12), 
+email VARCHAR, 
+comment TEXT, 
+blacklisted BOOLEAN DEFAULT FALSE, 
+guest_id BIGSERIAL PRIMARY KEY);
+
+CREATE TABLE bookings (
+booking_date DATE, 
+checkin_date DATE, 
+checkout_date DATE, 
+status VARCHAR(20), 
+breakfast BOOLEAN, 
+price DECIMAL(30,2), 
+comment TEXT,
+guest_contact_id BIGINT, 
+booking_number CHAR(13) PRIMARY KEY, 
+FOREIGN KEY (guest_contact_id) REFERENCES guests (guest_id));
+
+CREATE TABLE passport_data (
+passport_series VARCHAR, 
+passport_number VARCHAR, 
+date_of_issue DATE, 
+date_of_birth DATE, 
+place_of_birth VARCHAR, 
+nationality VARCHAR, 
+name VARCHAR, 
+surname VARCHAR, 
+fathers_name VARCHAR, 
+passport_data_id BIGSERIAL PRIMARY KEY);
+
+CREATE TABLE hotels (
+hotel_name VARCHAR, 
+hotel_address VARCHAR, 
+hotel_id SERIAL PRIMARY KEY);
+
+CREATE TABLE rooms (
+room_type VARCHAR, 
+rooms_num INT, 
+hotel_id INT NOT NULL,
+room_id SERIAL PRIMARY KEY, 
+FOREIGN KEY (hotel_id) REFERENCES hotels (hotel_id));
+
+CREATE TABLE booking_passports (
+booking_numb CHAR(13), 
+passport_id BIGINT, 
+FOREIGN KEY (booking_numb) REFERENCES bookings (booking_number), 
+FOREIGN KEY (passport_id) REFERENCES passport_data (passport_data_id));
+
+CREATE TABLE booking_rooms (
+booking_numb CHAR(13), 
+room_id BIGINT, 
+row_id BIGSERIAL PRIMARY KEY,
+FOREIGN KEY (booking_numb) REFERENCES bookings (booking_number), 
+FOREIGN KEY (room_id) REFERENCES rooms (room_id));
+
+
+INSERT INTO hotels VALUES 
+('Emerald', '1 Green Street'), 
+('Ruby', '10 Red Street'), 
+('Saphire', '5 Blue Street'), 
+('Diamond', '3 White Street'), 
+('Aquamarine', '1 Paper Street');
+
+insert into rooms values ('Single Standart', 5,2);
+insert into rooms values ('Double Standart', 15,2);
+insert into rooms values ('Triple Standart', 3,2);
+insert into rooms values ('Single Standart', 7,3);
+insert into rooms values ('Single Comfort', 3,3);
+insert into rooms values ('Double Standart', 17,3);
+insert into rooms values ('Double Comfort', 12,3);
+insert into rooms values ('Single Comfort', 20,4);
+insert into rooms values ('Double Comfort', 25,4);
+insert into rooms values ('Luxury Room', 4,4);
+insert into rooms values ('Double Standart with separated bed', 10,5);
+insert into rooms values ('Double Standart with king size bed', 10,5);
+insert into rooms values ('Double Comfort with separated beds', 10,5);
+insert into rooms values ('Double Comfort with king size bed', 10,5);
+insert into rooms values ('Triple Comfort', 1,5);
+
+
+\copy guests from 'C:\Users\user\Desktop\Python programs\databases\postgres\hotels_web\guests.csv' encoding 'UTF8' delimiter ',' csv header;
+\copy passport_data from 'C:\Users\user\Desktop\Python programs\databases\postgres\hotels_web\passports.csv' encoding 'UTF8' delimiter ',' csv header;
+\copy bookings from 'C:\Users\user\Desktop\Python programs\databases\postgres\hotels_web\bookings.csv' encoding 'UTF8' delimiter ',' csv header;
+\copy booking_passports from 'C:\Users\user\Desktop\Python programs\databases\postgres\hotels_web\booking_passports.csv' encoding 'UTF8' delimiter ',' csv header;
+\copy booking_rooms from 'C:\Users\user\Desktop\Python programs\databases\postgres\hotels_web\booking_rooms.csv' encoding 'UTF8 'delimiter ',' csv header;
+
+
+create view rooms_in_hotels_view as
+select hotel_name, hotel_address, room_type, rooms_num as number_of_rooms
+from hotels join rooms on hotels.hotel_id=rooms.hotel_id;
+
+create view bookings_general_info as
+select booking_number, hotel_name, hotel_address, room_type, checkin_date, checkout_date, name, surname, breakfast, price
+from ((((hotels join rooms on hotels.hotel_id=rooms.hotel_id) join booking_rooms on rooms.room_id=booking_rooms.room_id) join 
+bookings on booking_rooms.booking_numb=bookings.booking_number) join guests on bookings.guest_contact_id=guests.guest_id);
+
+
+CREATE INDEX guest_surname_index ON guests (surname);
+CREATE INDEX guest_phone_index ON guests (phone);
+CREATE INDEX guest_email_index ON guests (email);
+CREATE INDEX passport_surname_index ON passport_data (surname);
+CREATE INDEX passport_date_of_birth_index ON passport_data (date_of_birth);
+CREATE INDEX passport_number_index ON passport_data (passport_number);
+CREATE INDEX booking_date_index ON bookings (booking_date);
+CREATE INDEX checkin_date_index ON bookings (checkin_date);
+
+copy (select * from bookings_general_info) to 'C:/Users/user/Desktop/Python programs/databases/postgres/hotels_web/output.txt' with header;
